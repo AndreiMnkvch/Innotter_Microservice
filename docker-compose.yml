@@ -1,0 +1,17 @@
+version: "3"
+services:
+  statistics:
+    build: .
+    ports:
+      - "7000:7000"
+    restart: always
+    networks:
+      - micro_net
+      - generic
+networks:
+  generic:
+    name: generic
+    external: true
+  micro_net:
+    name: micro_net
+  
