@@ -5,13 +5,13 @@ services:
     ports:
       - "7000:7000"
     restart: always
+    volumes:
+      - ./:/app
     networks:
-      - micro_net
-      - generic
+      - core_net
+    env_file:
+      - mic.env
 networks:
-  generic:
-    name: generic
+  core_net:
+    name: core_net
     external: true
-  micro_net:
-    name: micro_net
-  

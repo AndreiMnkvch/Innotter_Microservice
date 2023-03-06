@@ -7,6 +7,14 @@ name = "pypi"
 fastapi = "*"
 uvicorn = {extras = ["standart"], version = "*"}
 pika = "*"
+asyncio = "*"
+aio-pika = "*"
+aioboto3 = "*"
+python-dotenv = "*"
+pyjwt = {extras = ["crypto"], version = "*"}
+pytest = "*"
+httpx = "*"
+moto = "*"
 
 [dev-packages]
 
