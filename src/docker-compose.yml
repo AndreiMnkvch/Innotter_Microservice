@@ -1,0 +1,17 @@
+version: "3"
+services:
+  statistics:
+    build: .
+    ports:
+      - "7000:7000"
+    restart: always
+    volumes:
+      - ./:/app
+    networks:
+      - core_net
+    env_file:
+      - mic.env
+networks:
+  core_net:
+    name: core_net
+    external: true
